@@ -1,5 +1,9 @@
+package classPractice;
+
 public class Weapons {
 
+
+    public static boolean causesDamage = true;
     int damageOutput = 0;
     int price = 0;
     boolean isOneHanded = false;
@@ -11,7 +15,7 @@ public class Weapons {
         this.isOneHanded = isOneHanded;
     }
 
-    public Weapons(int output, int money ) {
+    public Weapons(int output, int money) {
         this(output, money, false);
     }
 
@@ -40,5 +44,21 @@ public class Weapons {
         return isOneHanded;
     }
 
+    public static boolean isCausesDamage() {
+        return causesDamage;
+    }
 
+    public static void setCausesDamage(boolean causesDamage) {
+        Weapons.causesDamage = causesDamage;
+    }
+
+
+    @Override
+    public String toString() {
+        return "classPractice.Weapons{" +
+                "damageOutput=" + damageOutput +
+                ", price=" + price +
+                ", isOneHanded=" + isOneHanded +
+                '}';
+    }
 }
